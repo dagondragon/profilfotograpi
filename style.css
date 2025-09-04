@@ -1,0 +1,29 @@
+/* HERO SECTION */
+.hero {
+  min-height: 100vh;
+  background: url("hero-photo.jpg") no-repeat center center/cover;
+  position: relative;
+  padding-top: 70px; /* biar konten tidak ketutup navbar fixed */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* overlay gelap agar teks lebih jelas */
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* HOVER ICON SOSMED */
+.text-dark:hover i {
+  color: #0d6efd; /* biru bootstrap */
+  transform: scale(1.2);
+  transition: 0.3s;
+}
