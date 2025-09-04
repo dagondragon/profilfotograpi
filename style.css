@@ -1,29 +1,37 @@
-/* HERO SECTION */
-.hero {
-  min-height: 100vh;
-  background: url("hero-photo.jpg") no-repeat center center/cover;
+/* HERO SLIDE */
+.hero-slide {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
   position: relative;
-  padding-top: 70px; /* biar konten tidak ketutup navbar fixed */
 }
 
-.hero::before {
-  content: "";
+.hero-slide .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* overlay gelap agar teks lebih jelas */
+  background: rgba(0, 0, 0, 0.5);
 }
 
-.hero .container {
+.hero-slide .container {
   position: relative;
   z-index: 2;
 }
 
-/* HOVER ICON SOSMED */
+/* ICON SOSMED HOVER */
 .text-dark:hover i {
-  color: #0d6efd; /* biru bootstrap */
+  color: #0d6efd;
   transform: scale(1.2);
   transition: 0.3s;
+}
+
+/* PORTFOLIO IMAGE EFFECT */
+#portfolio img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+#portfolio img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
